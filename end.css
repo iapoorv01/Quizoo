@@ -1,0 +1,242 @@
+/* General Body and Layout Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative; /* Stacking context for z-index */
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    position: relative; /* Stacking context for z-index */
+  }
+  
+  /* Heading Styles */
+  h1 {
+    font-size: 3rem;
+    color: #fff; /* White text for contrast */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Form Styles */
+  form {
+    margin-bottom: 30px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    outline: none;
+    background-color: #333; /* Dark grey background for input */
+    color: #fff; /* White text inside input */
+  }
+  
+  input[type="text"]:focus {
+    border-color: #5e9ed6;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50; /* Green button */
+    color: white; /* White text on the button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+  }
+  
+  button[type="submit"]:hover:not(:disabled) {
+    background-color: #45a049;
+  }
+  
+  /* Save Button */
+  #saveScoreBtn {
+    position: relative; /* Ensure the button has positioning */
+    z-index: 100; /* Higher than any other element */
+    pointer-events: auto; /* Ensure button is clickable */
+  }
+  
+  /* Username Input */
+  #username {
+    position: relative; /* Ensure it is properly positioned */
+    z-index: 10; /* Ensure the input field is on top of other elements */
+  }
+  
+  /* Button Styles (for Play Again and Go Home) */
+  a.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    position: relative; /* Ensure buttons are above other elements */
+    z-index: 101; /* Ensure buttons are on top of everything */
+  }
+  
+  a.btn:hover {
+    background-color: #e55b00;
+  }
+  
+  /* Result Box Styling */
+  #resultDiv {
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Ensure stacking context */
+  }
+  
+  #result_box {
+    background-color: #333; /* Dark background for result box */
+    color: #fff; /* White text inside result box */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    position: relative;
+    z-index: 10; /* Ensures it appears above GIF */
+  }
+  
+  #result_box.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #complete_text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6347;
+    margin-bottom: 20px;
+  }
+  
+  #score_text {
+    font-size: 1.5rem;
+    color: #fff; /* White text for score */
+    margin-top: 10px;
+  }
+  
+  #congrats {
+    font-size: 1.2rem;
+    color: #4CAF50; /* Green color for congrats */
+    margin-top: 20px;
+  }
+  
+  #crown_icon {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+  }
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    width: 100px; /* Increase size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .logo img {
+    max-width: 100%; /* Ensures logo scales responsively */
+    height: auto;    /* Maintain aspect ratio */
+  }
+  /* GIF Animation */
+  #end_gif {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Make sure GIF is behind the content */
+  }
+  
+  #celeb {
+    width: 150px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  #wish {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    animation: slideUp 3s ease-out infinite;
+  }
+  
+  /* Floating animation for the celebrity image */
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Slide up animation for the wish GIF */
+  @keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    input[type="text"] {
+      width: 200px;
+    }
+  
+    a.btn {
+      padding: 10px 20px;
+    }
+  
+    #celeb {
+      width: 120px;
+    }
+  
+    #wish {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    input[type="text"] {
+      width: 180px;
+    }
+  
+    a.btn {
+      padding: 10px 15px;
+      font-size: 1rem;
+    }
+  }
+  

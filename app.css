@@ -1,0 +1,176 @@
+/* Reset the margin and padding for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body takes up the full viewport height */
+}
+
+body {
+  background-color: rgb(0, 0, 0);  /* Black background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%; /* Ensure the background stretches fully */
+  color: #fff; /* Ensure text is readable on black background */
+  font-size: 62.5%; /* You can adjust this for font sizing as per design needs */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 5.4rem;
+  color: #56a5eb;
+  margin-bottom: 5rem;
+}
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+#h1 h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+  box-sizing: border-box;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+/* UTILITIES */
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  width: 100px; /* Increase size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logo img {
+  max-width: 100%; /* Ensures logo scales responsively */
+  height: auto;    /* Maintain aspect ratio */
+}
+
+.container {
+  width: 100%;
+  height: 65vh; /* Ensure the container takes up the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.container > * {
+  width: 100%;
+}
+.container:hover{
+  cursor:progress;
+  transition-duration: 0.8s;
+  transform: scale(1.05);
+  box-shadow: 7px 7px 15px 3px rgba(255, 215, 0, 0.6);
+
+  
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BUTTONS */
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #56a5eb;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #56a5eb;
+  background-color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* FORMS */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Animation for h1 glow effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #c93d3d, 0 0 20px #fff, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 50px #ff2190, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 10px 10px 100px #c20c0c, 0 0 80px #e04191, 0 0 50px #f884be, 0 0 50px #dd1f7e, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}

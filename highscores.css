@@ -1,0 +1,45 @@
+/* High Scores List Styles */
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+  transform: scale(1.025);
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  width: 100px; /* Increase size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logo img {
+  max-width: 100%; /* Ensures logo scales responsively */
+  height: auto;    /* Maintain aspect ratio */
+}
+
+/* Reset Button Styling */
+#resetHighScoresBtn {
+  background-color: #f44336; /* Red background for reset */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+#resetHighScoresBtn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}

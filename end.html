@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Congrats!</title>
+    <link rel="stylesheet" href="end.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="end" class="flex-center flex-column">
+        <h1 id="finalScore"></h1>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+          >
+            Save
+          </button>
+        </form>
+        <a class="btn" href="game.html">Play Again</a>
+        <a class="btn" href="index.html">Go Home</a>
+      </div>
+
+      <!-- Add the resultDiv and end_gif elements here -->
+      <div id="resultDiv"> 
+        <div id="result_box" style="display: none;">
+          <div id="complete_text">You've completed the Quiz!</div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSA0IcZBgz4a7vSYc18nKpfDwfFW6Ml97Yywe129kbFHmNLnz5r-8OjcQgOsaMvZ6EaCs&usqp=CAU" alt="crown" id="crown_icon">
+          <div id="score_text"></div>
+          <div id="congrats"></div>
+        </div>   
+      </div>
+
+      <div id="end_gif" style="display: none;">
+        <img src="./assest.gif" alt="ballon" id="celeb">
+        <img height="600px" width="1000px" src="https://www.icegif.com/wp-content/uploads/2023/05/icegif-107.gif" alt="ending_wish" id="wish">
+      </div>
+
+    </div>
+    <div class="logo">
+      <a href="https://www.linkedin.com/in/-apoorv-">
+        <img src="logo.png" alt="Logo" />
+      </a>
+    </div>
+    
+    <script src="end.js"></script>
+  </body>
+</html>
