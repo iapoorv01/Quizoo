@@ -36,7 +36,7 @@ function showResults() {
 }
 
 // Call this function when the quiz is finished
-// You should call `showResults()` after the quiz ends, replacing the part where you're displaying the score.
+
 showResults();
 
 // Save high score logic
